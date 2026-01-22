@@ -9,24 +9,24 @@ void main() {
       math = NikiMath();
     });
 
-    test('add() adds two positive numbers correctly', () {
-      expect(math.add(2, 3), equals(5));
-      expect(math.add(10, 20), equals(30));
+    test('add() returns formatted string for positive numbers', () {
+      expect(math.add(2, 3), equals('Sum is : 5'));
+      expect(math.add(10, 20), equals('Sum is : 30'));
     });
 
-    test('add() adds negative numbers correctly', () {
-      expect(math.add(-5, -3), equals(-8));
-      expect(math.add(-10, 5), equals(-5));
+    test('add() returns formatted string for negative numbers', () {
+      expect(math.add(-5, -3), equals('Sum is : -8'));
+      expect(math.add(-10, 5), equals('Sum is : -5'));
     });
 
-    test('add() adds zero correctly', () {
-      expect(math.add(0, 0), equals(0));
-      expect(math.add(5, 0), equals(5));
-      expect(math.add(0, 5), equals(5));
+    test('add() returns formatted string for zero', () {
+      expect(math.add(0, 0), equals('Sum is : 0'));
+      expect(math.add(5, 0), equals('Sum is : 5'));
+      expect(math.add(0, 5), equals('Sum is : 5'));
     });
 
-    test('add() handles large numbers', () {
-      expect(math.add(1000000, 2000000), equals(3000000));
+    test('add() handles large numbers in formatted string', () {
+      expect(math.add(1000000, 2000000), equals('Sum is : 3000000'));
     });
   });
 }

@@ -1,8 +1,8 @@
 /// A simple utility library for learning Dart package development.
 ///
 /// This library provides basic utility functions and classes, including
-/// mathematical operations. It was created as a learning project to understand
-/// the Dart package ecosystem and publishing process.
+/// mathematical operations with formatted output. It was created as a learning
+/// project to understand the Dart package ecosystem and publishing process.
 ///
 /// ## Usage
 ///
@@ -11,7 +11,7 @@
 ///
 /// void main() {
 ///   var math = NikiMath();
-///   print(math.add(5, 3)); // Output: 8
+///   print(math.add(5, 3)); // Output: "Sum is : 8"
 /// }
 /// ```
 library;

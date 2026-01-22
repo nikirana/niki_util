@@ -9,7 +9,7 @@ A simple utility package for learning Dart package development and publishing to
 ## Features
 
 - ✅ Simple math utilities (`NikiMath` class)
-- ✅ Basic addition operations
+- ✅ Formatted addition operations (returns readable strings)
 - ✅ Clean and simple API
 - ✅ Well-documented code
 - ✅ Includes examples and tests
@@ -20,7 +20,7 @@ Add `niki_util` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  niki_util: ^1.0.0
+  niki_util: ^2.0.0
 ```
 
 Then run:
@@ -40,12 +40,12 @@ void main() {
   // Create an instance of NikiMath
   var math = NikiMath();
   
-  // Use the add method
+  // Use the add method - returns a formatted string
   var result = math.add(5, 3);
-  print('5 + 3 = $result'); // Output: 5 + 3 = 8
+  print(result); // Output: "Sum is : 8"
   
   // Another example
-  print('10 + 20 = ${math.add(10, 20)}'); // Output: 10 + 20 = 30
+  print(math.add(10, 20)); // Output: "Sum is : 30"
 }
 ```
 
@@ -59,7 +59,21 @@ A simple math utility class.
 
 #### Methods
 
-- `int add(int a, int b)` - Adds two integers and returns the result.
+- `String add(int a, int b)` - Adds two integers and returns a formatted string: "Sum is : {result}"
+
+## Migration from v1.0.0 to v2.0.0
+
+⚠️ **Breaking Change:** The `add()` method now returns a `String` instead of `int`.
+
+```dart
+// v1.0.0 (old):
+int result = math.add(5, 3);  // result = 8
+print(result + 2);             // prints 10
+
+// v2.0.0 (new):
+String result = math.add(5, 3); // result = "Sum is : 8"
+print(result);                  // prints "Sum is : 8"
+```
 
 ## Additional information
 

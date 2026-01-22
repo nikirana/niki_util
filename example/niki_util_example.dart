@@ -4,15 +4,18 @@ void main() {
   // Create an instance of NikiMath
   var math = NikiMath();
 
-  // Basic addition examples
-  print('Example 1: ${math.add(5, 2)}'); // Output: 7
-  print('Example 2: ${math.add(10, 15)}'); // Output: 25
-  print('Example 3: ${math.add(-5, 3)}'); // Output: -2
-  print('Example 4: ${math.add(0, 100)}'); // Output: 100
+  // Basic addition examples - now returns formatted strings!
+  print(math.add(5, 2)); // Output: Sum is : 7
+  print(math.add(10, 15)); // Output: Sum is : 25
+  print(math.add(-5, 3)); // Output: Sum is : -2
+  print(math.add(0, 100)); // Output: Sum is : 100
 
-  // Demonstrating usage in calculations
+  // Demonstrating usage with variables
   var num1 = 42;
   var num2 = 58;
-  var sum = math.add(num1, num2);
-  print('\n$num1 + $num2 = $sum'); // Output: 42 + 58 = 100
+  var result = math.add(num1, num2);
+  print(result); // Output: Sum is : 100
+
+  // Note: The result is now a String, not an int
+  print(result.runtimeType); // Output: String
 }
