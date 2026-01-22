@@ -1,0 +1,16 @@
+name: niki_util
+description: A simple utility package for learning Dart package development and publishing. Includes basic math operations and utilities.
+version: 1.0.0
+homepage: https://github.com/nikirana/niki_util
+repository: https://github.com/nikirana/niki_util
+
+environment:
+  sdk: ^3.10.0
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
